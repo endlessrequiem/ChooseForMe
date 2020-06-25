@@ -5,8 +5,8 @@ import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
-//import android.util.Log
 import java.util.ArrayList
+//import android.util.Log
 
 
 class MainActivity : AppCompatActivity() {
@@ -21,7 +21,7 @@ class MainActivity : AppCompatActivity() {
         val choices: TextView = findViewById(R.id.choices)
         val result: TextView = findViewById(R.id.result)
 
-        val choicesArr = ArrayList<String>(5)
+        val choicesArr = ArrayList<String>()
 
         add.setOnClickListener {
             if (input.text.toString().isBlank()){
