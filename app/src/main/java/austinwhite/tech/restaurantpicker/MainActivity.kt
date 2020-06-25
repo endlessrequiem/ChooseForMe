@@ -18,28 +18,32 @@ class MainActivity : AppCompatActivity() {
         val add: Button = findViewById(R.id.add)
         val clear: Button = findViewById(R.id.clear)
         val choose: Button = findViewById(R.id.choose)
-        val choice1: TextView = findViewById(R.id.choices)
+        val choices: TextView = findViewById(R.id.choices)
         val result: TextView = findViewById(R.id.result)
 
         val choicesArr = ArrayList<String>(5)
 
         add.setOnClickListener {
-            choicesArr.add(input.text.toString())
-            choice1.text = choicesArr.toString().replace("[", "").replace("]", "")
-            input.setText("")
-            //Log.i("Debug Check", choicesArr.toString()) //for debug purposes
+            if (input.text.toString().isBlank()){
+                result.text = getString(R.string.noInput)
+            } else {
+                choicesArr.add(input.text.toString())
+                choices.text = choicesArr.toString().replace("[", "").replace("]", "")
+                input.setText("")
+                //Log.i("Debug Check", choicesArr.toString()) //for debug purposes
+            }
         }
 
         clear.setOnClickListener {
             choicesArr.clear()
-            choice1.text = ""
+            choices.text = getString(R.string.choice)
             result.text = getString(R.string.result)
             //Log.i("Debug Check", choicesArr.toString()) //for debug purposes
         }
 
         choose.setOnClickListener {
             if (choicesArr.isEmpty()) {
-                result.text = getString(R.string.emptyError)
+                result.text = getString(R.string.empty)
             } else {
                 result.text = choicesArr.random().toString()
             }

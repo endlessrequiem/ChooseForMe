@@ -6,5 +6,6 @@
     <string name="result">Result will appear here</string>
     <string name="clear">Clear</string>
     <string name="choose">Choose For Me</string>
-    <string name="emptyError">Error: Add some choices</string>
+    <string name="empty">Error: Add some choices</string>
+    <string name="noInput">Error: Empty Input</string>
 </resources>
