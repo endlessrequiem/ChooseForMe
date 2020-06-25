@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Choose For Me</string>
+    <string name="addRestaurant">Add Choices</string>
+    <string name="add">Add</string>
+    <string name="choice">Your choices will display here</string>
+    <string name="result">Result will appear here</string>
+    <string name="clear">Clear</string>
+    <string name="choose">Choose For Me</string>
+    <string name="emptyError">Error: Add some choices</string>
+</resources>
