@@ -2,7 +2,6 @@ package austinwhite.tech.restaurantpicker
 
 import android.os.Bundle
 import android.util.Log
-import android.view.View
 import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
@@ -48,7 +47,8 @@ class MainActivity : AppCompatActivity() {
 
         choose.setOnClickListener {
             if (choicesArr.isEmpty()) {
-                result.text = getString(R.string.empty)
+                Toast.makeText(this@MainActivity, getString(R.string.empty), Toast.LENGTH_SHORT).show()
+
             } else {
                 result.text = choicesArr.random().toString()
             }
