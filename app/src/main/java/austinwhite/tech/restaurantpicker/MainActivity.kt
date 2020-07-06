@@ -55,20 +55,19 @@ class MainActivity : AppCompatActivity() {
         }
 
         removeButton.setOnClickListener {
-            val toRemove = removeInput.text.toString()
 
-            if (toRemove.isBlank()) {
+            if (removeInput.text.toString().isBlank()) {
             Toast.makeText(this@MainActivity, "Nothing Here!", Toast.LENGTH_SHORT).show()
 
         } else {
-                if (choicesArr.contains(toRemove)) {
-                    choicesArr.remove(toRemove)
+                if (choicesArr.contains(removeInput.text.toString())) {
+                    choicesArr.remove(removeInput.text.toString())
                     choices.text = choicesArr.toString().replace("[", "").replace("]", "")
                     Log.i("Debug Check", choicesArr.toString()) //for debug purposes
                     removeInput.setText("")
 
                 } else {
-                    Toast.makeText(this@MainActivity, "Not in Array", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(this@MainActivity, "Entry not found", Toast.LENGTH_SHORT).show()
 
 
                 }
