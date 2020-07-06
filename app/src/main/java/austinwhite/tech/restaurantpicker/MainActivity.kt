@@ -6,7 +6,7 @@ import android.widget.EditText
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import java.util.ArrayList
-//import android.util.Log
+import android.util.Log
 
 
 class MainActivity : AppCompatActivity() {
@@ -30,7 +30,7 @@ class MainActivity : AppCompatActivity() {
                 choicesArr.add(input.text.toString())
                 choices.text = choicesArr.toString().replace("[", "").replace("]", "")
                 input.setText("")
-                //Log.i("Debug Check", choicesArr.toString()) //for debug purposes
+                Log.i("Debug Check", choicesArr.toString()) //for debug purposes
             }
         }
 
@@ -38,7 +38,7 @@ class MainActivity : AppCompatActivity() {
             choicesArr.clear()
             choices.text = getString(R.string.choice)
             result.text = getString(R.string.result)
-            //Log.i("Debug Check", choicesArr.toString()) //for debug purposes
+            Log.i("Debug Check", choicesArr.toString()) //for debug purposes
         }
 
         choose.setOnClickListener {
